@@ -293,7 +293,7 @@ if [[ -f "composer.phar" ]]; then
     composer --version 2>&1 | grep "^Composer version" > /dev/null || error "File '/composer.phar' is not a Composer executable!"
     notice_inline "Using '/composer.phar' to install dependencies."
 else
-    buildcurl "$S3_URL/composer-1.2.0.tar.gz" | tar xz -C $BUILD_DIR/.heroku/php
+    buildcurl "$S3_URL/composer-1.5.1.tar.gz" | tar xz -C $BUILD_DIR/.heroku/php
     composer() {
         $engine `which composer` "$@"
     }
